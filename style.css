@@ -93,11 +93,7 @@ body {
     transition: 0.3s;
   }
 
-  .navbar a:hover {
-    text-decoration: underline; /* Add underline on hover */
-    font-size: 24px; /* Increase font size on hover */
-}
-
+ 
   
   .menu {
     display: flex;
@@ -142,7 +138,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
-  background-color: #FDD5B1;
+  background-color: #FFFFFF;
 
 }
 
