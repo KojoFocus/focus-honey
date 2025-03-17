@@ -29,7 +29,7 @@ const HeroSection = () => {
             <img
               src="/images/hero.png" // Path to the image in the public folder
               alt="Focus Honey - Pure and Natural"
-              className="w-full max-w-[150px] sm:max-w-[250px]" // Reduced size of the image
+              className="w-full max-w-[170px] sm:max-w-[250px]" // Reduced size of the image
             />
           </div>
 
