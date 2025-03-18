@@ -4,7 +4,18 @@
 // import Products from "./Pages/Products";
 // import Contact from "./Pages/Contact";
 
-import HeroSection from "./components/HeroSection";
+import HomePage from "./Pages/Home";
+// import ServicesPage from "./Pages/Services";
+
+// import ContactPage from "./Pages/Contact";
+
+// import Home from "./Pages/Home";
+
+import AboutPage from "./Pages/About";
+
+// import ProductPage from "./Pages/ProductPage";
+
+// import HeroSection from "./components/HeroSection";
 
 // const App = () => {
 //   return (
@@ -24,7 +35,14 @@ import HeroSection from "./components/HeroSection";
 const App = () => {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      {/* <ProductPage /> */}
+
+      {/* <Home /> */}
+      {/* <ContactPage /> */}
+      {/* <ServicesPage /> */}
+      <HomePage />
+      <AboutPage />
     </>
   );
 };
