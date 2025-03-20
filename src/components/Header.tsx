@@ -4,6 +4,7 @@ import {
   XMarkIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom"; // Import Link from React Router
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -30,22 +31,22 @@ const Header = () => {
 
         {/* Centered Logo */}
         <div className="flex-grow flex items-center justify-center">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Focus Honey</span>
             <img
               alt="Focus Honey Logo"
               src="/images/logo.png" // Replace with your logo path
               className="h-16 w-auto" // Larger logo size
             />
-          </a>
+          </Link>
         </div>
 
         {/* Right Section: Shop Now Icon */}
         <div className="flex items-center">
-          <a href="#shop" className="text-white">
+          <Link to="/products" className="text-white">
             <ShoppingCartIcon className="size-6" />
             <span className="sr-only">Shop Now</span>
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -58,14 +59,14 @@ const Header = () => {
         {/* Header Section of Sidebar */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200/20">
           {/* Logo in Sidebar */}
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Focus Honey</span>
             <img
               alt="Focus Honey Logo"
               src="/images/logo.png" // Replace with your logo path
               className="h-8 w-auto"
             />
-          </a>
+          </Link>
           {/* Close Button */}
           <button
             type="button"
@@ -81,40 +82,40 @@ const Header = () => {
         <div className="px-6 py-4 space-y-4">
           {/* Navigation Links */}
           <div className="space-y-2">
-            <a
-              href="#about"
+            <Link
+              to="/about"
               className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
             >
               About Us
-            </a>
-            <a
-              href="#products"
+            </Link>
+            <Link
+              to="/products"
               className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
             >
               Products
-            </a>
-            <a
-              href="#benefits"
+            </Link>
+            <Link
+              to="/benefits"
               className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
             >
               Benefits
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/contact"
               className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Call-to-Action Button */}
           <div>
-            <a
-              href="#shop"
+            <Link
+              to="/products"
               className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
             >
               Shop Now
-            </a>
+            </Link>
           </div>
         </div>
       </div>
