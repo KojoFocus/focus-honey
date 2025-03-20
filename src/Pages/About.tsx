@@ -1,4 +1,5 @@
-// import Header from "../components/Header"; // Import your existing Header component
+import { CheckCircleIcon, UsersIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const AboutPage = () => {
   return (
@@ -10,8 +11,6 @@ const AboutPage = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-6 space-y-12 pt-40">
-        {" "}
-        {/* Increased padding from top */}
         {/* Our Mission */}
         <section>
           <h2 className="text-4xl font-semibold text-center mb-8">
@@ -24,6 +23,7 @@ const AboutPage = () => {
             ecosystems, and provide pure, natural bee products.
           </p>
         </section>
+
         {/* What We Do */}
         <section>
           <h2 className="text-4xl font-semibold text-center mb-8">
@@ -31,50 +31,55 @@ const AboutPage = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Card 1: Sustainable Beekeeping */}
-            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800">
-              <h3 className="text-xl font-semibold mb-4">
+            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
+              <img
+                src="/images/sustainablebeekeeping.png" // Adjust the path as needed
+                alt="Sustainable Beekeeping"
+                className="w-32 h-32 mx-auto mb-4 object-cover rounded-full border-4 border-white"
+              />
+              <h3 className="text-xl font-semibold mb-2">
                 Sustainable Beekeeping
               </h3>
-              <p className="text-sm">
-                We practice eco-friendly beekeeping methods that prioritize the
-                health of bees and the environment.
-              </p>
             </div>
 
             {/* Card 2: Pure Honey & Bee Products */}
-            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800">
-              <h3 className="text-xl font-semibold mb-4">
+            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
+              <img
+                src="/images/honeyandbeeproducts.png" // Adjust the path as needed
+                alt="Pure Honey & Bee Products"
+                className="w-32 h-32 mx-auto mb-4 object-cover rounded-full border-4 border-white"
+              />
+              <h3 className="text-xl font-semibold mb-2">
                 Pure Honey & Bee Products
               </h3>
-              <p className="text-sm">
-                Our range includes pure honey, infused honey, and other
-                bee-derived products for health and wellness.
-              </p>
             </div>
 
             {/* Card 3: Training & Education */}
-            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800">
-              <h3 className="text-xl font-semibold mb-4">
+            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
+              <img
+                src="/images/trainingandeducation.png" // Adjust the path as needed
+                alt="Training & Education"
+                className="w-32 h-32 mx-auto mb-4 object-cover rounded-full border-4 border-white"
+              />
+              <h3 className="text-xl font-semibold mb-2">
                 Training & Education
               </h3>
-              <p className="text-sm">
-                We train individuals and communities in sustainable beekeeping
-                practices to promote livelihoods and environmental stewardship.
-              </p>
             </div>
 
             {/* Card 4: Eco-Friendly Methods */}
-            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800">
-              <h3 className="text-xl font-semibold mb-4">
+            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
+              <img
+                src="/images/ecofriendlymethods.png" // Adjust the path as needed
+                alt="Eco-Friendly Methods"
+                className="w-32 h-32 mx-auto mb-4 object-cover rounded-full border-4 border-white"
+              />
+              <h3 className="text-xl font-semibold mb-2">
                 Eco-Friendly Methods
               </h3>
-              <p className="text-sm">
-                Our operations are guided by environmentally conscious practices
-                to ensure minimal impact on nature.
-              </p>
             </div>
           </div>
         </section>
+
         {/* Why Choose Us? */}
         <section>
           <h2 className="text-4xl font-semibold text-center mb-8">
@@ -82,24 +87,27 @@ const AboutPage = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Reason 1: Pure and Natural */}
-            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800">
+            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
+              <CheckCircleIcon className="w-16 h-16 mx-auto mb-4 text-gray-800" />
               <h3 className="text-xl font-semibold mb-4">Pure and Natural</h3>
-              <p className="text-sm">
-                Our honey and bee products are free from additives, ensuring you
-                receive the purest form of nature's goodness.
+              <p className="text-gray-700">
+                Our products are 100% natural, free from additives and
+                preservatives, ensuring you get the best nature has to offer.
               </p>
             </div>
 
             {/* Reason 2: Community Impact */}
-            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800">
+            <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
+              <UsersIcon className="w-16 h-16 mx-auto mb-4 text-gray-800" />
               <h3 className="text-xl font-semibold mb-4">Community Impact</h3>
-              <p className="text-sm">
-                By supporting us, you contribute to sustainable livelihoods and
-                environmental conservation efforts.
+              <p className="text-gray-700">
+                We work closely with local communities to promote sustainable
+                practices and create economic opportunities.
               </p>
             </div>
           </div>
         </section>
+
         {/* Call to Action */}
         <section className="text-center">
           <h2 className="text-4xl font-semibold text-center mb-8">
@@ -109,12 +117,13 @@ const AboutPage = () => {
             Discover the power of bees with Focus Honey. Explore our products,
             learn about sustainable beekeeping, and be part of the change.
           </p>
-          <a
-            href="#shop"
-            className="inline-block rounded-lg bg-[#f5d08c] px-6 py-3 text-sm font-semibold text-gray-800 hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
+
+          <Link
+            to="/contact"
+            className="inline-block rounded-lg bg-[#f5d08c] px-6 py-3 text-sm font-semibold text-gray-800 hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 transition-colors duration-300"
           >
             Talk to Us
-          </a>
+          </Link>
         </section>
       </div>
     </div>
