@@ -1,11 +1,13 @@
 import Header from "../components/Header"; // Import your existing Header component
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 const HomePage = () => {
   return (
-    <div className="bg-[#636363] text-center">
+    <div className="bg-[#636363] text-center min-h-screen">
+      {" "}
+      {/* Full-screen background */}
       {/* Header */}
       <Header />
-
       {/* Hero Section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         {/* Gold Gradient Overlay */}
@@ -35,12 +37,12 @@ const HomePage = () => {
 
           {/* Button */}
           <div className="mt-10">
-            <a
-              href="#shop"
+            <Link
+              to="/products" // Link to the Products Page
               className="inline-block rounded-lg border border-yellow-500 px-6 py-3 text-sm font-semibold text-yellow-500 hover:bg-yellow-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
             >
               Go to Store
-            </a>
+            </Link>
           </div>
         </div>
       </div>

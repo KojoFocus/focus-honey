@@ -9,7 +9,9 @@ const AboutPage = () => {
       </header> */}
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 space-y-12 pt-20">
+      <div className="container mx-auto px-6 space-y-12 pt-40">
+        {" "}
+        {/* Increased padding from top */}
         {/* Our Mission */}
         <section>
           <h2 className="text-4xl font-semibold text-center mb-8">
@@ -22,7 +24,6 @@ const AboutPage = () => {
             ecosystems, and provide pure, natural bee products.
           </p>
         </section>
-
         {/* What We Do */}
         <section>
           <h2 className="text-4xl font-semibold text-center mb-8">
@@ -74,7 +75,6 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
-
         {/* Why Choose Us? */}
         <section>
           <h2 className="text-4xl font-semibold text-center mb-8">
@@ -100,7 +100,6 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className="text-center">
           <h2 className="text-4xl font-semibold text-center mb-8">
