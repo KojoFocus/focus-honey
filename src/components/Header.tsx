@@ -54,7 +54,7 @@ const Header = () => {
       <div
         className={`${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } fixed inset-y-0 left-0 z-50 w-64 overflow-y-auto bg-white/20 backdrop-blur-lg transition-transform duration-300 ease-in-out`}
+        } fixed inset-y-0 left-0 z-50 w-64 overflow-y-auto bg-white/20 backdrop-blur-lg h-[50vh] rounded-lg transition-transform duration-300 ease-in-out`}
       >
         {/* Header Section of Sidebar */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200/20">
@@ -106,6 +106,14 @@ const Header = () => {
               className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
             >
               Contact
+            </Link>
+          </div>
+          <div className="mt-10">
+            <Link
+              to="/products" // Link to the Products Page
+              className="inline-block rounded-lg bg-[#f5d08c] px-6 py-3 text-sm font-semibold text-gray-800 hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
+            >
+              Shop Now
             </Link>
           </div>
 
