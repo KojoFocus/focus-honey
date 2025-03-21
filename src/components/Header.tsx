@@ -83,6 +83,12 @@ const Header = () => {
           {/* Navigation Links */}
           <div className="space-y-2">
             <Link
+              to="/"
+              className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
+            >
+              Home
+            </Link>
+            <Link
               to="/about"
               className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
             >
@@ -94,12 +100,7 @@ const Header = () => {
             >
               Products
             </Link>
-            <Link
-              to="/benefits"
-              className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
-            >
-              Benefits
-            </Link>
+
             <Link
               to="/contact"
               className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
@@ -110,12 +111,12 @@ const Header = () => {
 
           {/* Call-to-Action Button */}
           <div>
-            <Link
+            {/* <Link
               to="/products"
               className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
             >
               Shop Now
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

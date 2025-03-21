@@ -66,8 +66,8 @@ const ContactPage = () => {
           <h2 className="text-4xl font-semibold mb-8">Contact Us</h2>
           <div className="space-y-4">
             <p>Email: info@focushoney.com</p>
-            <p>Phone: +123 456 7890</p>
-            <p>Address: 123 Bee Street, Hive City</p>
+            <p>Phone: +233 540 484 052</p>
+            <p>Address: Teiman Borga-Town, Accra</p>
           </div>
         </section>
       </div>
