@@ -36,7 +36,7 @@ const HomePage = () => {
           </div>
 
           {/* Button */}
-          <div className="mt-10">
+          <div className="mt-20">
             <Link
               to="/products" // Link to the Products Page
               className="inline-block rounded-lg border border-yellow-500 px-6 py-3 text-sm font-semibold text-yellow-500 hover:bg-yellow-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
