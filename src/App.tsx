@@ -4,6 +4,7 @@ import HomePage from "./Pages/Home"; // Import your Home Page
 import AboutPage from "./Pages/About"; // Import your About Page
 import ProductsPage from "./Pages/ProductPage"; // Import your Products Page
 import ContactPage from "./Pages/Contact"; // Import your Contact Page
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         {/* Contact Page */}
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
