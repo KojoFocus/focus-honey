@@ -4,11 +4,6 @@ import { Link } from "react-router-dom";
 const AboutPage = () => {
   return (
     <div className="bg-[#636363] text-white min-h-screen pb-20">
-      {/* Header Section */}
-      {/* <header className="relative z-50 pb-10">
-        <Header />
-      </header> */}
-
       {/* Main Content */}
       <div className="container mx-auto px-6 space-y-12 pt-40">
         {/* Our Mission */}

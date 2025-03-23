@@ -1,9 +1,4 @@
-import {
-  FacebookIcon,
-  InstagramIcon,
-  TwitterIcon,
-  LinkedinIcon,
-} from "lucide-react"; // Import social media icons from Lucide React
+import { FacebookIcon, InstagramIcon, XIcon, LinkedinIcon } from "lucide-react"; // Import social media icons from Lucide React
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -49,7 +44,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-yellow-500 transition-colors duration-200"
             >
-              <TwitterIcon size={24} />
+              <XIcon size={24} />
             </a>
             <a
               href="https://linkedin.com" // Replace with your LinkedIn URL
@@ -61,6 +56,8 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        {/* Separator line*/}
+        <div className="border-t border-[#f5d08c] " />
 
         {/* Copyright Notice */}
         <div className="text-center text-sm text-gray-400">

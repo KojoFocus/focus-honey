@@ -31,7 +31,7 @@ const ProductPage = () => {
               <div>
                 <h3 className="text-lg font-semibold">Pure Honey</h3>
                 <p className="text-xl mt-2">Ghc 100</p>
-                <button className="mt-4 inline-block rounded-lg border border-yellow-500 px-4 py-2 text-yellow-500 hover:bg-yellow-500 hover:text-white">
+                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
                   Buy Now
                 </button>
               </div>
@@ -49,7 +49,7 @@ const ProductPage = () => {
               <div>
                 <h3 className="text-lg font-semibold">Raw Honey</h3>
                 <p className="text-xl mt-2">Ghc 120</p>
-                <button className="mt-4 inline-block rounded-lg border border-yellow-500 px-4 py-2 text-yellow-500 hover:bg-yellow-500 hover:text-white">
+                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
                   Buy Now
                 </button>
               </div>
@@ -67,7 +67,7 @@ const ProductPage = () => {
               <div>
                 <h3 className="text-lg font-semibold">Organic Honey</h3>
                 <p className="text-xl mt-2">Ghc 150</p>
-                <button className="mt-4 inline-block rounded-lg border border-yellow-500 px-4 py-2 text-yellow-500 hover:bg-yellow-500 hover:text-white">
+                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
                   Buy Now
                 </button>
               </div>
@@ -86,7 +86,7 @@ const ProductPage = () => {
               <div>
                 <h3 className="text-lg font-semibold">Premium Honey</h3>
                 <p className="text-xl mt-2">Ghc 175</p>
-                <button className="mt-4 inline-block rounded-lg border border-yellow-500 px-4 py-2 text-yellow-500 hover:bg-yellow-500 hover:text-white">
+                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
                   Buy Now
                 </button>
               </div>
@@ -104,7 +104,7 @@ const ProductPage = () => {
               <div>
                 <h3 className="text-lg font-semibold">Honey Supreme</h3>
                 <p className="text-xl mt-2">Ghc 200</p>
-                <button className="mt-4 inline-block rounded-lg border border-yellow-500 px-4 py-2 text-yellow-500 hover:bg-yellow-500 hover:text-white">
+                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
                   Buy Now
                 </button>
               </div>
@@ -122,7 +122,7 @@ const ProductPage = () => {
               <div>
                 <h3 className="text-lg font-semibold">Honey Deluxe</h3>
                 <p className="text-xl mt-2">Ghc 225</p>
-                <button className="mt-4 inline-block rounded-lg border border-yellow-500 px-4 py-2 text-yellow-500 hover:bg-yellow-500 hover:text-white">
+                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
                   Buy Now
                 </button>
               </div>
