@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"; // Import Link for navigation
 
 const HomePage = () => {
   return (
-    <div className="bg-[#636363] text-center min-h-screen">
+    <div className="bg-[#636363] text-center ">
       {" "}
       {/* Full-screen background */}
       {/* Header */}
