@@ -39,7 +39,7 @@ const HomePage = () => {
           <div className="mt-20">
             <Link
               to="/products" // Link to the Products Page
-              className="inline-block rounded-lg border border-[#f5d08c] px-6 py-3 text-sm font-semibold text-[#f5d08c] hover:bg-yellow-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
+              className="inline-block rounded-lg border border-[#f5d08c] px-6 py-3 text-sm font-semibold text-[#f5d08c] hover:bg-[#f5d08c] hover:text-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
             >
               Go to Store
             </Link>
