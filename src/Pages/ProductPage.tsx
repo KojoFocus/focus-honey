@@ -1,7 +1,64 @@
-import Header from "../components/Header"; // Import your existing Header component
+import { useState } from "react";
+import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 
+const products = [
+  {
+    id: 1,
+    name: "Pure Honey",
+    price: "Ghc 100",
+    image: "/images/hero1.png",
+    alt: "Pure Honey",
+  },
+  {
+    id: 2,
+    name: "Raw Honey",
+    price: "Ghc 120",
+    image: "/images/p2.png",
+    alt: "Raw Honey",
+  },
+  {
+    id: 3,
+    name: "Organic Honey",
+    price: "Ghc 150",
+    image: "/images/p1.png",
+    alt: "Organic Honey",
+  },
+  {
+    id: 4,
+    name: "Premium Honey",
+    price: "Ghc 175",
+    image: "/images/hero1.png",
+    alt: "Premium Honey",
+  },
+  {
+    id: 5,
+    name: "Honey Supreme",
+    price: "Ghc 200",
+    image: "/images/p2.png",
+    alt: "Honey Supreme",
+  },
+  {
+    id: 6,
+    name: "Honey Deluxe",
+    price: "Ghc 225",
+    image: "/images/p1.png",
+    alt: "Honey Deluxe",
+  },
+];
+
 const ProductPage = () => {
+  const [filteredProducts, setFilteredProducts] = useState(products);
+
+  // Handle search query
+  const handleSearch = (query: string) => {
+    const lowerCaseQuery = query.toLowerCase();
+    const filtered = products.filter((product) =>
+      product.name.toLowerCase().includes(lowerCaseQuery)
+    );
+    setFilteredProducts(filtered);
+  };
+
   return (
     <div className="bg-[#636363] text-white min-h-screen pb-20">
       {/* Header */}
@@ -10,124 +67,36 @@ const ProductPage = () => {
       </header>
 
       {/* Search Bar Section */}
-      <SearchBar />
+      <SearchBar onSearch={handleSearch} />
 
       {/* Product List */}
       <div className="mt-10 px-6 lg:px-8">
-        {" "}
-        {/* Add lg:px-8 for larger screens */}
         <div className="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-6">
-          {" "}
-          {/* Grid layout for larger screens */}
-          {/* Product Card 1 */}
-          <div className="bg-[#4d4d4d] rounded-lg p-6">
-            <div className="flex items-center space-x-6">
-              <img
-                src="/images/hero1.png" // Replace with your actual product image path
-                alt="Pure Honey"
-                className="w-32 h-32 object-cover rounded-lg"
-                onError={(e) => (e.currentTarget.style.display = "none")} // Hide broken images
-              />
-              <div>
-                <h3 className="text-lg font-semibold">Pure Honey</h3>
-                <p className="text-xl mt-2">Ghc 100</p>
-                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
-                  Buy Now
-                </button>
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product) => (
+              <div key={product.id} className="bg-[#4d4d4d] rounded-lg p-6">
+                <div className="flex items-center space-x-6">
+                  <img
+                    src={product.image}
+                    alt={product.alt}
+                    className="w-32 h-32 object-cover rounded-lg"
+                    onError={(e) => (e.currentTarget.style.display = "none")}
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold">{product.name}</h3>
+                    <p className="text-xl mt-2">{product.price}</p>
+                    <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          {/* Product Card 2 */}
-          <div className="bg-[#4d4d4d] rounded-lg p-6">
-            <div className="flex items-center space-x-6">
-              <img
-                src="/images/p2.png" // Replace with your actual product image path
-                alt="Raw Honey"
-                className="w-32 h-32 object-cover rounded-lg"
-                onError={(e) => (e.currentTarget.style.display = "none")} // Hide broken images
-              />
-              <div>
-                <h3 className="text-lg font-semibold">Raw Honey</h3>
-                <p className="text-xl mt-2">Ghc 120</p>
-                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
-                  Buy Now
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* Product Card 3 */}
-          <div className="bg-[#4d4d4d] rounded-lg p-6">
-            <div className="flex items-center space-x-6">
-              <img
-                src="/images/p1.png" // Replace with your actual product image path
-                alt="Organic Honey"
-                className="w-32 h-32 object-cover rounded-lg"
-                onError={(e) => (e.currentTarget.style.display = "none")} // Hide broken images
-              />
-              <div>
-                <h3 className="text-lg font-semibold">Organic Honey</h3>
-                <p className="text-xl mt-2">Ghc 150</p>
-                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
-                  Buy Now
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* Add more product cards as needed */}
-          {/* Product Card 4 */}
-          <div className="bg-[#4d4d4d] rounded-lg p-6">
-            <div className="flex items-center space-x-6">
-              <img
-                src="/images/hero1.png" // Replace with your actual product image path
-                alt="Premium Honey"
-                className="w-32 h-32 object-cover rounded-lg"
-                onError={(e) => (e.currentTarget.style.display = "none")} // Hide broken images
-              />
-              <div>
-                <h3 className="text-lg font-semibold">Premium Honey</h3>
-                <p className="text-xl mt-2">Ghc 175</p>
-                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
-                  Buy Now
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* Product Card 5 */}
-          <div className="bg-[#4d4d4d] rounded-lg p-6">
-            <div className="flex items-center space-x-6">
-              <img
-                src="/images/p2.png" // Replace with your actual product image path
-                alt="Honey Supreme"
-                className="w-32 h-32 object-cover rounded-lg"
-                onError={(e) => (e.currentTarget.style.display = "none")} // Hide broken images
-              />
-              <div>
-                <h3 className="text-lg font-semibold">Honey Supreme</h3>
-                <p className="text-xl mt-2">Ghc 200</p>
-                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
-                  Buy Now
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* Product Card 6 */}
-          <div className="bg-[#4d4d4d] rounded-lg p-6">
-            <div className="flex items-center space-x-6">
-              <img
-                src="/images/p1.png" // Replace with your actual product image path
-                alt="Honey Deluxe"
-                className="w-32 h-32 object-cover rounded-lg"
-                onError={(e) => (e.currentTarget.style.display = "none")} // Hide broken images
-              />
-              <div>
-                <h3 className="text-lg font-semibold">Honey Deluxe</h3>
-                <p className="text-xl mt-2">Ghc 225</p>
-                <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
-                  Buy Now
-                </button>
-              </div>
-            </div>
-          </div>
+            ))
+          ) : (
+            <p className="col-span-3 text-center text-gray-400">
+              No products found.
+            </p>
+          )}
         </div>
       </div>
     </div>

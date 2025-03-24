@@ -1,4 +1,18 @@
-const SearchBar = () => {
+import { useState } from "react";
+
+interface SearchBarProps {
+  onSearch: (query: string) => void;
+}
+
+const SearchBar = ({ onSearch }: SearchBarProps) => {
+  const [query, setQuery] = useState("");
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    setQuery(value);
+    onSearch(value);
+  };
+
   return (
     <div className="mt-12 px-6 pt-20">
       <div className="relative rounded-md shadow-sm">
@@ -22,7 +36,9 @@ const SearchBar = () => {
           type="text"
           name="search"
           id="search"
-          className="block w-full rounded-md border-0 py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-transparent"
+          value={query}
+          onChange={handleInputChange}
+          className="block w-full rounded-md border-0 py-1.5 pl-10 pr-3 text-white ring-1 ring-inset ring-[#f5d08c] placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#f5d08c] sm:text-sm sm:leading-6 bg-transparent"
           placeholder="Search for honey"
         />
       </div>
