@@ -1,4 +1,8 @@
-import { CheckCircleIcon, UsersIcon } from "@heroicons/react/24/outline";
+import {
+  CheckCircleIcon,
+  UsersIcon,
+  ChatBubbleOvalLeftIcon,
+} from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
 const AboutPage = () => {
@@ -35,18 +39,56 @@ const AboutPage = () => {
               <h3 className="text-xl font-semibold mb-2">
                 Sustainable Beekeeping
               </h3>
+              <Link
+                to="/sustainable-beekeeping"
+                className="inline-flex items-center mt-4 px-6 py-2 rounded-lg bg-[#FFB800] text-gray-800 font-semibold text-sm hover:bg-yellow-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 transition-colors duration-300"
+              >
+                Learn More
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
             </div>
 
-            {/* Card 2: Pure Honey & Bee Products */}
+            {/* Card 2: Honey Processing & Sales */}
             <div className="bg-[#f5d08c] rounded-lg p-6 text-center text-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
               <img
                 src="/images/honeyandbeeproducts.png" // Adjust the path as needed
                 alt="Pure Honey & Bee Products"
                 className="w-32 h-32 mx-auto mb-4 object-cover rounded-full border-4 border-white"
               />
-              <h3 className="text-xl font-semibold mb-2">
-                Pure Honey & Bee Products
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">Honey Processing</h3>
+              <Link
+                to="/pure-honey-and-bee-products"
+                className="inline-flex items-center mt-4 px-6 py-2 rounded-lg bg-[#FFB800] text-gray-800 font-semibold text-sm hover:bg-yellow-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 transition-colors duration-300"
+              >
+                Learn More
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
             </div>
 
             {/* Card 3: Training & Education */}
@@ -59,6 +101,26 @@ const AboutPage = () => {
               <h3 className="text-xl font-semibold mb-2">
                 Training & Education
               </h3>
+              <Link
+                to="/training-and-education"
+                className="inline-flex items-center mt-4 px-6 py-2 rounded-lg bg-[#FFB800] text-gray-800 font-semibold text-sm hover:bg-yellow-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 transition-colors duration-300"
+              >
+                Learn More
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
             </div>
 
             {/* Card 4: Eco-Friendly Methods */}
@@ -68,9 +130,27 @@ const AboutPage = () => {
                 alt="Eco-Friendly Methods"
                 className="w-32 h-32 mx-auto mb-4 object-cover rounded-full border-4 border-white"
               />
-              <h3 className="text-xl font-semibold mb-2">
-                Eco-Friendly Methods
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">Hives Management</h3>
+              <Link
+                to="/hives-management"
+                className="inline-flex items-center mt-4 px-6 py-2 rounded-lg bg-[#FFB800] text-gray-800 font-semibold text-sm hover:bg-yellow-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 transition-colors duration-300"
+              >
+                Learn More
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </Link>
             </div>
           </div>
         </section>
@@ -115,9 +195,10 @@ const AboutPage = () => {
 
           <Link
             to="/contact"
-            className="inline-block rounded-lg bg-[#f5d08c] px-6 py-3 text-sm font-semibold text-gray-800 hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 transition-colors duration-300"
+            className="inline-flex items-center rounded-lg bg-[#f5d08c] px-6 py-3 text-sm font-semibold text-gray-800 hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 transition-colors duration-300"
           >
             Talk to Us
+            <ChatBubbleOvalLeftIcon className="w-4 h-4 ml-2" />
           </Link>
         </section>
       </div>

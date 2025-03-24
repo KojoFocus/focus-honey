@@ -6,6 +6,12 @@ import ProductsPage from "./Pages/ProductsPage"; // Import your Products Page
 import ContactPage from "./Pages/Contact"; // Import your Contact Page
 import Footer from "./components/Footer";
 
+// Import the new "What We Do" pages
+import SustainableBeekeeping from "./Pages/SustainableBeekeeping";
+import HoneyProcessing from "./Pages/HoneyProcessing";
+import TrainingEducation from "./Pages/TrainingEducation";
+import HivesManagement from "./Pages/HivesManagement";
+
 const App = () => {
   return (
     <Router>
@@ -25,7 +31,21 @@ const App = () => {
 
         {/* Contact Page */}
         <Route path="/contact" element={<ContactPage />} />
+
+        {/* What We Do Pages */}
+        <Route
+          path="/sustainable-beekeeping"
+          element={<SustainableBeekeeping />}
+        />
+        <Route
+          path="/pure-honey-and-bee-products"
+          element={<HoneyProcessing />}
+        />
+        <Route path="/training-and-education" element={<TrainingEducation />} />
+        <Route path="/hives-management" element={<HivesManagement />} />
       </Routes>
+
+      {/* Footer is shared across all pages */}
       <Footer />
     </Router>
   );
