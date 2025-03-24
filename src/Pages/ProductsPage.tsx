@@ -47,7 +47,7 @@ const products = [
   },
 ];
 
-const ProductPage = () => {
+const ProductsPage = () => {
   const [filteredProducts, setFilteredProducts] = useState(products);
 
   // Handle search query
@@ -57,6 +57,16 @@ const ProductPage = () => {
       product.name.toLowerCase().includes(lowerCaseQuery)
     );
     setFilteredProducts(filtered);
+  };
+
+  // Function to handle WhatsApp redirection
+  const redirectToWhatsApp = (productName: string) => {
+    const phoneNumber = "+233540484052"; // Replace with your WhatsApp number
+    const message = encodeURIComponent(
+      `Hello! Please I want ${productName}.\n\nQuantity: \nDelivery Address: \nContact Number: `
+    );
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -85,7 +95,10 @@ const ProductPage = () => {
                   <div>
                     <h3 className="text-lg font-semibold">{product.name}</h3>
                     <p className="text-xl mt-2">{product.price}</p>
-                    <button className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white">
+                    <button
+                      className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white"
+                      onClick={() => redirectToWhatsApp(product.name)}
+                    >
                       Buy Now
                     </button>
                   </div>
@@ -103,4 +116,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default ProductsPage;
