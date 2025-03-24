@@ -96,7 +96,7 @@ const ProductsPage = () => {
                     <h3 className="text-lg font-semibold">{product.name}</h3>
                     <p className="text-xl mt-2">{product.price}</p>
                     <button
-                      className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-yellow-500 hover:text-white"
+                      className="mt-4 inline-block rounded-lg border border-[#f5d08c] px-4 py-2 text-[#f5d08c] hover:bg-[#f5d08c] hover:text-gray-800"
                       onClick={() => redirectToWhatsApp(product.name)}
                     >
                       Buy Now
