@@ -1,12 +1,16 @@
-import { useState } from "react";
 import {
   Bars3Icon,
   XMarkIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
-const Header = () => {
+interface HeaderProps {
+  cartCount: number; // Prop to receive the cart count
+}
+
+const Header = ({ cartCount }: HeaderProps) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
@@ -36,17 +40,23 @@ const Header = () => {
             <img
               alt="Focus Honey Logo"
               src="/images/logo.png" // Replace with your logo path
-              className="h-16 w-auto" // Larger logo size
+              className="h-16 w-auto"
             />
           </Link>
         </div>
 
-        {/* Right Section: Shop Now Icon */}
-        <div className="flex items-center">
-          <Link to="/products" className="text-white">
+        {/* Right Section: Cart Icon with Count */}
+        <div className="relative flex items-center">
+          <Link to="/cart" className="text-white">
             <ShoppingCartIcon className="size-6" />
-            <span className="sr-only">Shop Now</span>
+            <span className="sr-only">View Cart</span>
           </Link>
+          {/* Display the cart count */}
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-[#f5d08c] text-gray-800 text-xs font-semibold px-1.5 py-0.5 rounded-full">
+              {cartCount}
+            </span>
+          )}
         </div>
       </nav>
 
@@ -103,6 +113,13 @@ const Header = () => {
             </Link>
 
             <Link
+              to="/cart"
+              className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
+            >
+              Cart
+            </Link>
+
+            <Link
               to="/contact"
               className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
             >
@@ -111,21 +128,11 @@ const Header = () => {
           </div>
           <div className="mt-10">
             <Link
-              to="/products" // Link to the Products Page
+              to="/products"
               className="inline-block rounded-lg bg-[#f5d08c] px-6 py-3 text-sm font-semibold text-gray-800 hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
             >
               Shop Now
             </Link>
-          </div>
-
-          {/* Call-to-Action Button */}
-          <div>
-            {/* <Link
-              to="/products"
-              className="block rounded-lg px-3 py-2 text-base font-semibold text-white hover:bg-gray-50/50"
-            >
-              Shop Now
-            </Link> */}
           </div>
         </div>
       </div>
