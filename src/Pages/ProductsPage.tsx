@@ -3,25 +3,27 @@ import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 
 // Define the BaseProduct type
-type BaseProduct = {
+type Product = {
   id: number;
   name: string;
   price: string;
   image: string;
   alt: string;
+  quantity: number;
 };
 
 interface ProductsPageProps {
-  addToCart: (product: BaseProduct) => void; // Prop to receive the addToCart function
+  addToCart: (product: Product) => void; // Prop to receive the addToCart function
 }
 
-const products: BaseProduct[] = [
+const products: Product[] = [
   {
     id: 1,
     name: "Pure Honey",
     price: "Ghc 100",
     image: "/images/hero1.png",
     alt: "Pure Honey",
+    quantity: 0,
   },
   {
     id: 2,
@@ -29,6 +31,7 @@ const products: BaseProduct[] = [
     price: "Ghc 120",
     image: "/images/p2.png",
     alt: "Raw Honey",
+    quantity: 0,
   },
   // ... other products
 ];
