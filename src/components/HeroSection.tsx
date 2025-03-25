@@ -1,10 +1,7 @@
-import Header from "./Header";
-
 const HeroSection = () => {
   return (
     <div className="bg-[#636363] text-center">
-      {/* Header */}
-      <Header />
+      {/* Remove the Header component - it's already in App.tsx */}
 
       {/* Hero Content */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -27,9 +24,9 @@ const HeroSection = () => {
           {/* Image */}
           <div className="flex justify-center mb-12">
             <img
-              src="/images/hero.png" // Path to the image in the public folder
+              src="/images/hero.png"
               alt="Focus Honey - Pure and Natural"
-              className="w-full max-w-[200px] sm:max-w-[250px]" // Reduced size of the image
+              className="w-full max-w-[200px] sm:max-w-[250px]"
             />
           </div>
 

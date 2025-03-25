@@ -1,14 +1,7 @@
-import Header from "../components/Header"; // Import your existing Header component
-
 const ContactPage = () => {
   return (
     <div className="bg-[#636363] text-white min-h-screen pb-20">
-      {/* Header Section */}
-      <header className="relative z-50 pb-10">
-        <Header />
-      </header>
-
-      {/* Main Content */}
+      {/* Main Content - Header removed since it's in App.tsx */}
       <div className="container mx-auto px-6 space-y-12 pt-20">
         {/* Contact Form */}
         <section>

@@ -1,13 +1,10 @@
-import Header from "../components/Header"; // Import your existing Header component
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <div className="bg-[#636363] text-center ">
-      {" "}
-      {/* Full-screen background */}
-      {/* Header */}
-      <Header />
+    <div className="bg-[#636363] text-center">
+      {/* Remove the Header component - it's already in App.tsx */}
+
       {/* Hero Section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         {/* Gold Gradient Overlay */}
@@ -29,16 +26,16 @@ const HomePage = () => {
           {/* Image */}
           <div className="flex justify-center mb-12">
             <img
-              src="/images/hero.png" // Path to the image in the public folder
+              src="/images/hero.png"
               alt="Focus Honey - Pure and Natural"
-              className="w-full max-w-[200px] sm:max-w-[250px]" // Reduced size of the image
+              className="w-full max-w-[200px] sm:max-w-[250px]"
             />
           </div>
 
           {/* Button */}
           <div className="mt-20">
             <Link
-              to="/products" // Link to the Products Page
+              to="/products"
               className="inline-block rounded-lg border border-[#f5d08c] px-6 py-3 text-sm font-semibold text-[#f5d08c] hover:bg-[#f5d08c] hover:text-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
             >
               Go to Store

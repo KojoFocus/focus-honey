@@ -1,12 +1,7 @@
-import Header from "../components/Header"; // Import your existing Header component
-
 const ServicesPage = () => {
   return (
     <div className="bg-[#636363] text-white min-h-screen pb-20">
-      {/* Header Section */}
-      <header className="relative z-50 pb-10">
-        <Header />
-      </header>
+      {/* Remove the Header section completely */}
 
       {/* Main Content */}
       <div className="container mx-auto px-6 space-y-12 pt-20">
