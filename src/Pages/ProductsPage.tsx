@@ -91,51 +91,51 @@ const ProductsPage = ({ addToCart }: ProductsPageProps) => {
         <div className="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-6">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="bg-[#4d4d4d] rounded-lg p-6 shadow-md relative"
-              >
-                {/* Notification for this specific product */}
+              <div key={product.id} className="flex flex-col">
+                {/* Product Card */}
+                <div className="bg-[#4d4d4d] rounded-lg p-6 shadow-md">
+                  <div className="flex flex-col md:flex-row items-center space-x-6 md:space-x-4">
+                    <img
+                      src={product.image}
+                      alt={product.alt}
+                      className="w-32 h-32 object-cover rounded-lg mb-4 md:mb-0"
+                      onError={(e) => (e.currentTarget.style.display = "none")}
+                    />
+                    <div>
+                      <h3 className="text-lg font-semibold">{product.name}</h3>
+                      <p className="text-xl mt-2">{product.price}</p>
+
+                      <div className="mt-4 flex flex-wrap gap-2 justify-start md:justify-center">
+                        <button
+                          className="inline-block rounded-lg bg-[#f5d08c] px-3 py-2 text-sm md:text-base font-semibold text-gray-800 hover:bg-yellow-500 transition-colors duration-300"
+                          onClick={() => redirectToWhatsApp(product.name)}
+                        >
+                          Buy Now
+                        </button>
+
+                        <button
+                          className="inline-block rounded-lg border border-[#f5d08c] px-3 py-2 text-sm md:text-base font-semibold text-[#f5d08c] hover:bg-[#f5d08c] hover:text-gray-800 transition-colors duration-300"
+                          onClick={() => handleAddToCart(product)}
+                        >
+                          Add to Cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Notification below the product card */}
                 {activeNotification.productId === product.id && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#f5d08c] text-gray-800 px-4 py-2 rounded-lg shadow-lg z-10 flex items-center gap-2 whitespace-nowrap">
+                  <div className="mt-2 bg-[#f5d08c] text-gray-800 px-4 py-2 rounded-lg shadow-lg flex items-center justify-center gap-2 whitespace-nowrap">
                     <span>{activeNotification.message}</span>
                     <button
                       onClick={handleViewCart}
                       className="font-bold underline hover:text-gray-600 text-sm"
                     >
-                      View
+                      View Cart
                     </button>
                   </div>
                 )}
-
-                <div className="flex flex-col md:flex-row items-center space-x-6 md:space-x-4">
-                  <img
-                    src={product.image}
-                    alt={product.alt}
-                    className="w-32 h-32 object-cover rounded-lg mb-4 md:mb-0"
-                    onError={(e) => (e.currentTarget.style.display = "none")}
-                  />
-                  <div>
-                    <h3 className="text-lg font-semibold">{product.name}</h3>
-                    <p className="text-xl mt-2">{product.price}</p>
-
-                    <div className="mt-4 flex flex-wrap gap-2 justify-start md:justify-center">
-                      <button
-                        className="inline-block rounded-lg bg-[#f5d08c] px-3 py-2 text-sm md:text-base font-semibold text-gray-800 hover:bg-yellow-500 transition-colors duration-300"
-                        onClick={() => redirectToWhatsApp(product.name)}
-                      >
-                        Buy Now
-                      </button>
-
-                      <button
-                        className="inline-block rounded-lg border border-[#f5d08c] px-3 py-2 text-sm md:text-base font-semibold text-[#f5d08c] hover:bg-[#f5d08c] hover:text-gray-800 transition-colors duration-300"
-                        onClick={() => handleAddToCart(product)}
-                      >
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
               </div>
             ))
           ) : (
