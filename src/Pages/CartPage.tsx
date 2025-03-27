@@ -117,12 +117,12 @@ const CartPage = ({
                 className="inline-flex items-center rounded-lg bg-[#f5d08c] px-6 py-3 text-sm font-semibold text-gray-800 hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 transition-colors duration-300"
                 onClick={() => {
                   const phoneNumber = "+233540484052"; // Replace with your WhatsApp number
-                  let message = `Hello! Please I want:\n\n`;
+                  let message = `Hello! I want:\n\n`;
                   cartItems.forEach((item) => {
                     message += `${item.quantity} x ${item.name}\n`;
                   });
                   message += `\nTotal: Ghc ${calculateTotal()}\n\n`;
-                  message += "Quantity: \nDelivery Address: \nContact Number: ";
+                  message += "Delivery Address: \nContact Number: ";
                   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                     message
                   )}`;

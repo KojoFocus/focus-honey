@@ -54,7 +54,7 @@ const ProductsPage = ({ addToCart }: ProductsPageProps) => {
   const redirectToWhatsApp = (productName: string) => {
     const phoneNumber = "+233540484052";
     const message = encodeURIComponent(
-      `Hello! Please I want ${productName}.\n\nQuantity: \nDelivery Address: \nContact Number: `
+      `Hello! I want ${productName}.\n\nQuantity: \nDelivery Address: \nContact Number: `
     );
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, "_blank");
